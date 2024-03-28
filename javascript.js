@@ -31,7 +31,23 @@ function addBooksToShelves () {
         const shelves = document.getElementById('shelves')
         bookDiv = document.createElement('div')
         bookDiv.classList.add('book')
-        console.log(bookDiv)
+        bookDiv.setAttribute('id', book.title)
+        const bookTitle = document.createElement('h2')
+        bookTitle.textContent = book.title
+        const bookAuthor = document.createElement('div')
+        bookAuthor.textContent = book.author
+        const bookPages = document.createElement('div')
+        bookPages.textContent = `${book.pages} Pages`
+        const bookRead = document.createElement('div')
+        if (book.read) {
+            bookRead.textContent = 'Read'
+        } else {
+            bookRead.textContent = 'Unread'
+        }
+        bookDiv.append(bookTitle)
+        bookDiv.append(bookAuthor)
+        bookDiv.append(bookPages)
+        bookDiv.append(bookRead)
         shelves.append(bookDiv)
     })
 }

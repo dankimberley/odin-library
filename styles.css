@@ -183,5 +183,47 @@ label {
 }
 
 input {
-    font-weight: medium;
+    font-weight: bold;
+}
+
+#shelves {
+    background-color: var(--blue);
+    margin: 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(auto-fit, 150px);
+    gap: 5%;
+    justify-items: center;
+    padding: 5%;
+    overflow: scroll;
+    border-radius: 10px;
+
+}
+
+.book {
+    width: 100px;
+    height: 150px;
+    background-color: var(--red);
+    border-radius: 10px;
+    transition: all 200ms;
+    padding: 5%
+}
+
+.book:hover {
+    transform: scale(110%);
+    border: solid 2px var(--orange);
+}
+
+.book>h2 {
+    color: var(--white);
+    margin: 0;
+    font-size: 1rem;
+}
+
+.book>div {
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    font-size: 0.8rem;
+    line-height: 1rem;
 }
