@@ -1,0 +1,187 @@
+/* "DM Sans" */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* "Roboto" */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* "Poppins" */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* "Karla" */
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+    --blue: #0A0F24;
+    --white: #FAE3CF;
+    --orange: #FA8603;
+    --red: #BB2233;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--blue);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    font-family: Karla;
+    height: 100vh;
+}
+
+#container {
+    background-color: var(--white);
+    width: min(60ch, 100%);
+    height: 100%;
+    display: grid;
+    grid-template-rows: 6rem min(25%, 8rem) 1fr;
+}
+
+#title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 4rem;
+    padding: 0.5rem;
+    color: var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 200ms;
+}
+
+#title:hover {
+    transform: scale(110%);
+    cursor: pointer;
+}
+
+#form-container {
+    background-color: var(--blue);
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 100%;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 33% 34% 33%;
+}
+
+#title-input-box {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: flex;
+    grid-template-columns: 10ch 1fr;
+    justify-content: space-between;
+    margin-right: 5%;
+    align-items: center;
+    gap: 1ch;
+}
+
+#read-box {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1ch;
+    margin-right: 10%;
+}
+
+#author-input-box {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: flex;
+    grid-template-columns: 10ch 1fr;
+    justify-content: space-between;
+    margin-right: 5%;
+    align-items: center;
+    gap: 1ch;
+}
+
+#author-input {
+    
+    width: calc(100% - 6rem);
+    border-radius: 100rem;
+    outline: none;
+    border: none;
+    padding-left: 1ch;
+    font-family: Karla;
+    color: var(--blue);
+}
+
+label {
+    color: var(--orange);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 5%;
+    font-size: 0.8rem;
+}
+
+#pages-box {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1ch
+}
+
+#pages-input {
+    width: 5ch;
+}
+
+#submit-box {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+#title-input {
+    border-radius: 100rem;
+    border: none;
+    outline-color: transparent;
+    padding-left: 1ch;
+    width: calc(100% - 6rem);
+    font-family: Karla;
+    color: var(--blue);
+}
+
+#title-input:focus {
+    outline-color: none;
+    border: none;
+    outline-style: none;
+}
+
+#submit-button {
+    font-family: Karla;
+    font-weight: bold;
+    background-color: white;
+    color: var(--red);
+    border: solid 2px;
+    border-radius: 10rem;
+    padding: 5px;
+    font-size: 1rem;
+    transition: all 200ms;
+}
+
+#submit-button:hover {
+    background-color: var(--red);
+    color: var(--blue);
+    transform: translateY(-0.2rem);
+}
+
+input {
+    font-weight: medium;
+}
